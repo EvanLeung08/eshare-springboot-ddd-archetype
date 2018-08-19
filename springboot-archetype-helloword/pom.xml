@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.eshare</groupId>
-    <artifactId>springboot-scaffold-helloword</artifactId>
+    <artifactId>springboot-archetype-helloword</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springboot-scaffold-helloword</name>
+    <name>springboot-archetype-helloword</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>

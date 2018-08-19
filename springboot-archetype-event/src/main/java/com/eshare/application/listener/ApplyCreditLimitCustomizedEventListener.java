@@ -1,5 +1,6 @@
 package com.eshare.application.listener;
 
+import com.eshare.domain.model.order.ApplyCreditLimitEvent;
 import com.eshare.domain.model.order.OrderEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
@@ -10,9 +11,9 @@ import org.springframework.context.annotation.Configuration;
  * Email:10856214@163.com
  */
 @Configuration
-public class ApplyCreditLimitCustomizedEventListener implements ApplicationListener<OrderEvent> {
+public class ApplyCreditLimitCustomizedEventListener implements ApplicationListener<ApplyCreditLimitEvent> {
     @Override
-    public void onApplicationEvent(OrderEvent orderEvent) {
-        System.out.println("接收到自定义OrderEvent事件监听:"+orderEvent);
+    public void onApplicationEvent(ApplyCreditLimitEvent applyCreditLimitEvent) {
+        System.out.println("接收到自定义OrderEvent事件监听:"+applyCreditLimitEvent);
     }
 }

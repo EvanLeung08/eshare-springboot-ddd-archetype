@@ -20,7 +20,7 @@ public class Order {
      */
     private Integer orderType;
 
-    public Order(Long Long, Integer productType, Double amount, Integer orderType) {
+    public Order(Long id, Integer productType, Double amount, Integer orderType) {
         this.id = id;
         this.productType = productType;
         this.amount = amount;
