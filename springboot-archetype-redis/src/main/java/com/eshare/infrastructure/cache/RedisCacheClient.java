@@ -20,7 +20,7 @@ public class RedisCacheClient<k,v> implements CacheClient<k,v> {
 
     @Override
     public Optional get(k key) {
-        return Optional.of(redisTemplate.opsForValue().get(key));
+        return Optional.ofNullable(redisTemplate.opsForValue().get(key));
     }
 
     @Override

@@ -1,11 +1,16 @@
 package com.eshare.application.service;
 
+import com.eshare.application.cache.CacheClient;
 import com.eshare.domain.model.User.User;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.Optional;
 
 /**
  * Created by liangyh on 2018/8/19.
@@ -14,20 +19,25 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 public class UserServiceTest {
-
+    @Autowired
+    private CacheClient<String, User> cacheClient;
     @Autowired
     UserService userService;
 
-    @Test
-    public void testAddUser(){
-        User user = new User("王五",18);
-        userService.addUser(user);
+    @Before
+    public void testAddUser2Cache() {
+        User user = new User("1234556", "王五", 18);
+        cacheClient.put("1234556",user);
+        //从缓存中查询
+        Optional<User> user1 = cacheClient.get("1234556");
+        Assert.assertEquals("1234556",user1.get().getId());
+
     }
 
 
     @Test
-    public void testFindByName() {
-        User user = userService.findByName("王五");
-        System.out.println(user);
+    public void testFindById() {
+        User user = userService.findById("1234556");
+        Assert.assertEquals("1234556", user.getId());
     }
 }

@@ -28,13 +28,13 @@ public class UserService {
     }
 
 
-    public User findByName(String name) {
-        Optional<User> cacheUser = cacheClient.get(name);
+    public User findById(String id) {
+        Optional<User> cacheUser = cacheClient.get(id);
         if (cacheUser.isPresent()) {
             return cacheUser.get();
         }
         //在缓存不存在则从数据库读取
-        User user = userRepository.findByName(name);
+        User user = userRepository.findById(id);
         if (user!=null) {
             cacheClient.put(user.getName(), user);
         }

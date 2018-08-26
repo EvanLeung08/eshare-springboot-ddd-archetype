@@ -9,12 +9,23 @@ import java.io.Serializable;
 public class User implements Serializable {
     private static final long serialVersionUID = -1L;
 
+    private String id;
     private String name;
     private Integer age;
 
-    public User(String name, Integer age) {
+
+    public User(String id, String name, Integer age) {
+        this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,11 +44,11 @@ public class User implements Serializable {
         this.age = age;
     }
 
-
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 '}';
     }

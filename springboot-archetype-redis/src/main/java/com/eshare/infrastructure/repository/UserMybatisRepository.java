@@ -13,8 +13,8 @@ import org.springframework.stereotype.Repository;
 public class UserMybatisRepository implements UserRepository {
 
     @Override
-    public User findByName(String name) {
+    public User findById(String id) {
         //模拟从数据库读取数据
-        return new User("王五", 18);
+        return new User(id,"王五", 18);
     }
 }

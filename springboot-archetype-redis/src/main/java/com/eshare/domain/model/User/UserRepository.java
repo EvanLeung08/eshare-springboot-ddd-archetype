@@ -7,5 +7,5 @@ package com.eshare.domain.model.User;
  */
 public interface UserRepository  {
 
-    User findByName(String name);
+    User findById(String id);
 }
