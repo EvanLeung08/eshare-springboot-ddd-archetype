@@ -2,7 +2,7 @@ package com.eshare.infrastructure.repository;
 
 import com.eshare.domain.model.user.User;
 import com.eshare.domain.model.user.UserRepository;
-import com.eshare.infrastructure.repository.mapper.UserMapper;
+import com.eshare.infrastructure.repository.mapper.AnnotationUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -17,43 +17,42 @@ import java.util.List;
 public class UserH2Repository implements UserRepository {
 
     @Autowired
-    UserMapper userMapper;
-
+    AnnotationUserMapper annotationUserMapper;
 
 
     @Override
     public User findById(Long id) {
-        return userMapper.getOneById(id);
+        return annotationUserMapper.getOneById(id);
     }
 
     @Override
     public User findByIdcard(String idcard) {
-        return userMapper.getOneByIdcard(idcard);
+        return annotationUserMapper.getOneByIdcard(idcard);
     }
 
 
     @Override
     public User findByName(String name) {
-        return null;
+        return annotationUserMapper.getOneByName(name);
     }
 
     @Override
     public void save(User user) {
-        userMapper.insert(user);
+        annotationUserMapper.insert(user);
     }
 
     @Override
-    public Long deleteUser(String id) {
-        return null;
+    public void deleteUser(String idcard) {
+        annotationUserMapper.deleteUser(idcard);
     }
 
     @Override
-    public boolean updateUser(User user) {
-        return false;
+    public void updateUser(User user) {
+        annotationUserMapper.modifyUser(user);
     }
 
     @Override
     public List<User> findAll() {
-        return userMapper.getAll();
+        return annotationUserMapper.getAll();
     }
 }

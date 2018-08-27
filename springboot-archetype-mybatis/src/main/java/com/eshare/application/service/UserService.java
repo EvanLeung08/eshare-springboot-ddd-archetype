@@ -22,12 +22,12 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public User findById(Long id) {
-        return userRepository.findById(id);
+    public User findByIdcard(String idcard) {
+        return userRepository.findByIdcard(idcard);
     }
 
-    public void deleteUser(String id) {
-        userRepository.deleteUser(id);
+    public void deleteUser(String idcard) {
+        userRepository.deleteUser(idcard);
     }
 
     public void updateUser(User user) {

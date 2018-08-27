@@ -17,9 +17,9 @@ public interface UserRepository  {
 
     void save(User user);
 
-    Long deleteUser(String id);
+    void deleteUser(String idcard);
 
-    boolean updateUser(User user);
+    void updateUser(User user);
 
     List<User> findAll();
 }

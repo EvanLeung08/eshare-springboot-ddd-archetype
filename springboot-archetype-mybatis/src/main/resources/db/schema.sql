@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT comment '主键id',
   `name` varchar(32) DEFAULT NULL COMMENT '名称',
   `age` int(4) DEFAULT NULL COMMENT '年龄',
   `idcard` varchar(32) DEFAULT NULL COMMENT '身份证',

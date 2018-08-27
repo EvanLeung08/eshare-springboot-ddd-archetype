@@ -38,4 +38,28 @@ public class UserH2RepositoryTest {
         List<User> user=  userRepository.findAll();
         System.out.println(user);
     }
+
+    @Test
+    public void findByIdcard() {
+        User user = userRepository.findByIdcard("4444411123");
+        Assert.assertEquals("4444411123",user.getIdcard());
+    }
+
+    @Test
+    public void findByName() {
+        User user = userRepository.findByName("老王");
+        Assert.assertEquals("4444411123",user.getIdcard());
+    }
+
+    @Test
+    public void updateUser() {
+        User user = new User(10l,"老梁",22,"4444411123");
+        userRepository.updateUser(user);
+    }
+
+    @Test
+    public void deleteUser() {
+        userRepository.deleteUser("4444411123");
+    }
+
 }
