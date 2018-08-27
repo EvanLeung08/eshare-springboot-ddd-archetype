@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.eshare.infrastructure.mapper")
+@MapperScan("com.eshare.infrastructure.repository.mapper")
 public class Application {
 
     public static void main(String[] args) {

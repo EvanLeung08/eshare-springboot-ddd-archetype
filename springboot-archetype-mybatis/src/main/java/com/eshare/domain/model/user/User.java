@@ -9,22 +9,29 @@ import java.io.Serializable;
 public class User implements Serializable {
     private static final long serialVersionUID = -1L;
 
-    private String id;
+    private Long id;
     private String name;
     private Integer age;
+    private String idcard;
 
-
-    public User(String id, String name, Integer age) {
+    public User(Long id, String name, Integer age, String idcard) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.idcard = idcard;
     }
 
-    public String getId() {
+    public User(String name, Integer age, String idcard) {
+        this.name = name;
+        this.age = age;
+        this.idcard = idcard;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -44,12 +51,21 @@ public class User implements Serializable {
         this.age = age;
     }
 
+    public String getIdcard() {
+        return idcard;
+    }
+
+    public void setIdcard(String idcard) {
+        this.idcard = idcard;
+    }
+
     @Override
     public String toString() {
-        return "user{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", idcard='" + idcard + '\'' +
                 '}';
     }
 }
