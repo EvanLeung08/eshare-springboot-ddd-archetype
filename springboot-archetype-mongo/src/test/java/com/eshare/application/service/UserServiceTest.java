@@ -1,16 +1,13 @@
 package com.eshare.application.service;
 
-import com.eshare.domain.model.User.User;
+import com.eshare.domain.model.user.User;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.DependsOn;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by liangyh on 2018/8/27.

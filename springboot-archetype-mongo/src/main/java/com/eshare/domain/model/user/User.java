@@ -1,4 +1,4 @@
-package com.eshare.domain.model.User;
+package com.eshare.domain.model.user;
 
 import java.io.Serializable;
 
@@ -46,7 +46,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "user{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +

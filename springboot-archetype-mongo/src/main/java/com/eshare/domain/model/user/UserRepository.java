@@ -1,4 +1,4 @@
-package com.eshare.domain.model.User;
+package com.eshare.domain.model.user;
 
 /**
  * User的仓存接口

@@ -1,7 +1,7 @@
 package com.eshare.infrastructure.repository;
 
-import com.eshare.domain.model.User.User;
-import com.eshare.domain.model.User.UserRepository;
+import com.eshare.domain.model.user.User;
+import com.eshare.domain.model.user.UserRepository;
 import org.springframework.stereotype.Repository;
 
 /**

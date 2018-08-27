@@ -1,8 +1,8 @@
 package com.eshare.application.service;
 
 import com.eshare.application.cache.CacheClient;
-import com.eshare.domain.model.User.User;
-import com.eshare.domain.model.User.UserRepository;
+import com.eshare.domain.model.user.User;
+import com.eshare.domain.model.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
